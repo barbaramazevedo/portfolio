@@ -1,6 +1,6 @@
 # Desafio - Website Pessoal com HTML, CSS e JavaScript
 
-Este projeto consiste na construção de um website pessoal completo, partindo de uma pasta vazia até uma aplicação 100% funcional em ambiente local. O desafio explora a integração de boas práticas de HTML semântico, estilização SASS, manipulação dinâmica com JavaScript.
+Este projeto consiste na construção de um website pessoal completo, partindo do zero até uma aplicação 100% funcional em ambiente local. O desafio explora a integração de boas práticas de HTML semântico, estilização CSS (com SASS), manipulação dinâmica com JavaScript.
 
 ## 📦 Sobre o projeto
 
@@ -68,3 +68,6 @@ npm install
 ```
 npm run sass
 ```
+
+## ✨ Autor
+Desenvolvido por Bárbara Azevedo durante mentoria do programa StartDB em Agosto de 2025, sob orientação de Felipe Christofoli.
