@@ -19,6 +19,11 @@
         display: block;
     }
 
+    .portfolio-img {
+      touch-action: manipulation;
+      pointer-events: auto;
+    }
+
     .overlay {
       position: absolute;
       top: 0;
@@ -31,6 +36,7 @@
       justify-content: center;
       color: $white-color;
       transition: opacity 0.3s ease;
+      pointer-events: none;
     }
 
     .portfolio-subtitle {
