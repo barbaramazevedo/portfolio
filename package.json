@@ -2,15 +2,20 @@
   "name": "desafio-08-website",
   "version": "1.0.0",
   "main": "main.js",
+  "homepage": "https://github.com/barbaramazevedo/portfolio",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass src/styles/main.scss dist/styles.css --watch --no-source-map --style=compressed"
+    "build": "sass src/styles/main.scss dist/styles.css --no-source-map --style=compressed",
+    "sass": "sass src/styles/main.scss dist/styles.css --watch --no-source-map --style=compressed",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.89.2"
   }
 }
