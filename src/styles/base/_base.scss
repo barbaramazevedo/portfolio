@@ -1,0 +1,29 @@
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

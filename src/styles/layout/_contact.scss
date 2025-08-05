@@ -1,0 +1,217 @@
+@use '../variables/variables' as *;
+
+.contact-section {
+  padding: $padding-5xl $padding-m;
+  text-align: center;
+  font-family: $font-montserrat;
+
+  .contact-title {
+    font-size: $font-size-xxl;
+    font-weight: bold;
+    color: $dark-color;
+    margin-bottom: $padding-4xl;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: $gap-xl;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .contact-info {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap-b;
+    padding-bottom: $padding-xxl;
+
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .email-label {
+        font-size: $font-size-l;
+        font-weight: 600;
+        color: $dark-color;
+    }
+
+    .email-address {
+        font-size: $font-size-b;
+        color: $dark-color;
+    }
+  }
+
+  .contact-form {
+    flex: 2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-m;
+
+    .form-row {
+        display: flex;
+        gap: $gap-m;
+
+      input {
+          flex: 1;
+      }
+    }
+
+    input,
+    textarea {
+      padding: 0.75rem 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      font-family: $font-poppins;
+      font-size: $font-size-s;
+      resize: none;
+    }
+
+    button {
+      align-self: flex-start;
+      padding: 0.75rem 2rem;
+      background-color: $dark-color;
+      color: $white-color;
+      border: 2px solid transparent;
+      border-radius: 0.5rem;
+      font-size: $font-size-b;
+      font-family: $font-poppins;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+          background-color: transparent;
+          color: $dark-color;
+          border: 2px solid $dark-color;
+      }
+    }
+  }
+}
+
+[data-theme="light"] {
+    .email-icon-black {
+        display: none;
+    }
+}
+
+[data-theme="dark"] {
+  input::placeholder,
+  textarea::placeholder {
+    color: $white-color;
+    opacity: 0.8; 
+  }
+
+  .email-icon-white {
+      display: none;
+  }
+  .contact-section {
+    .contact-title,
+    .email-label,
+    .email-address {
+        color: $white-color;
+    }
+
+    .contact-form {
+      input,
+      textarea {
+          background-color: $dark-color;
+          color: $white-color;
+          border: 1px solid $white-color;
+          opacity: 0.8; 
+      }
+
+      button {
+          background-color: $white-color;
+          color: $dark-color;
+
+        &:hover {
+            background-color: transparent;
+            color: $white-color;
+            border: 2px solid $white-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .email-label {
+    font-size: $font-size-b;
+  }
+
+  .contact-form {
+    .form-row {
+      flex-direction: column;
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .email-label {
+    font-size: $font-size-m;
+  }
+
+  .contact-form {
+    .form-row {
+      flex-direction: row;
+    }
+
+    button {
+      align-self: flex-start;
+    }
+  }
+
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+
+  .contact-form {
+    .form-row {
+      flex-direction: row;
+    }
+
+    button {
+      align-self: flex-start;
+    }
+  }
+
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+}

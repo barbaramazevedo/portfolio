@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 125" width="125" height="124">
+	<title>icons8-texto-datilografado-150</title>
+	<defs>
+		<image  width="126" height="126" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAB+AgMAAACfTU0bAAAAAXNSR0IB2cksfwAAAAlQTFRFAAAA////AAAAc8aDcQAAAAN0Uk5T//8A18oNQQAAAQZJREFUeJzt1V0OwiAMB3BI9Ag7j95AH+CU7GFH8D4eYSaTttQlyr8s8cElshf28UuBUph3jctH+/vcQQcddNBBBx18guGs75ZxAzhe803CwAeVAMiDAaKzAY/gK1DuMYiuDebJDafxPdVRkkNZoDYYgNN9eDQAXQjkIewfNGfBrQnuNwNQq31AoCHqgFa2hMCghKgDLjkJUQeyLThEHUjZczYBkPpLGKx9ALD2gcBrHghwCBPoAQEBhzABhcjTwKAUBQb0YIOcTRvkQfwQ+KUxSH+ZGiAkOw8+lOMarYXUk2sDWA+bAaxJBbCqFcB9UQBvTmN3m3uTClIOOmM1y0x29XP/c/AEGL9Unt4Jh+cAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="-1"/>
+</svg>

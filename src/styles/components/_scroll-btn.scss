@@ -1,0 +1,48 @@
+@use '../variables/variables' as *;
+
+.scroll-btn {
+    position: absolute;
+    bottom: 50px;
+    left: 90%;
+    translate: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 50px;
+    color: $dark-color;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
+    gap: 5px;
+    text-decoration: none;
+    background: $white-color;
+    border-radius: 30px;
+    font-family: $font-poppins;
+    font-size: $font-size-xs;
+
+    img {
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+[data-theme="light"] {
+    .mouse-icon-white {
+        display: none;
+    }
+}
+
+[data-theme="dark"] {
+   
+    .mouse-icon-black {
+        display: none;
+    }
+    .scroll-btn {
+        background-color: $light-dark-color;
+        color: $white-color;
+    }
+}

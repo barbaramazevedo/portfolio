@@ -1,0 +1,238 @@
+@use '../variables/variables' as *;
+@use '../mixins/mixins' as *;
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 4rem;
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    gap: $gap-l;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .banner-title {
+    font-size: $font-size-xl;
+    font-family: $font-poppins;
+    color: $dark-color;
+    max-width: 750px;
+
+    .highlight {
+      color: $orange-color;
+      font-weight: bold;
+    }
+  }
+
+  .banner-description {
+    font-size: $font-size-xb;
+    font-family: $font-montserrat;
+    color: $dark-color;
+    max-width: 600px;
+    margin-bottom: $padding-m;
+  }
+
+  .banner-buttons {
+    display: flex;
+    gap: $gap-m;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: $font-size-b;
+      font-family: $font-poppins;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-resume {
+      @include button-primary;
+    }
+    .arrow-down-btn {
+      display: none;
+    }
+    .arrow-down-icon-black {
+      display:none;
+    }
+
+    .btn-conect {
+      background-color: transparent;
+      color: $dark-color;
+      font-weight: 500;
+      border: none;
+      padding: 0 0;
+      text-decoration:underline;
+    }
+
+    
+  }
+  .arrow-down-btn {
+      position: absolute;
+      bottom: 50px;
+      left: 90%;
+      translate: -50%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      color: $dark-color;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
+      gap: 5px;
+      text-decoration: none;
+      background: $white-color;
+      border-radius: 30px;
+      font-family: $font-poppins;
+
+      img {
+          display: flex;
+          height: 1.5rem;
+          width: 1.5rem;
+      }
+    }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .banner-buttons {
+      flex-direction: column;
+    }  
+    .banner-title {
+      font-size: $font-size-l;
+    }
+
+    .banner-description {
+      font-size: $font-size-b;
+    }
+
+    .arrow-down-btn {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding-top: 0;
+
+    .banner-content {
+      gap: $gap-s;
+    }
+    .banner-buttons {
+      flex-direction: column;
+
+      .btn-resume {
+        font-size: $font-size-b;
+      }
+
+      .btn-conect {
+        font-size: $font-size-b;
+      }
+    }
+
+    .arrow-down-btn {
+      display: flex;
+    }
+
+    .profile-image {
+      margin-top: 2rem;
+      width: 175px;
+      height: 175px;
+    }
+
+    .banner-title {
+      font-size: $font-size-xm;
+    }
+
+    .banner-description {
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+[data-theme="light"] {
+  .banner {
+    .arrow-down-icon-white {
+        display:none;
+    }
+    .banner-buttons{
+      .download-icon-white {
+          display: block;
+          height: 1rem;
+          width: 1rem;
+      }
+      .download-icon-black {
+          display: none;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .banner {
+    .arrow-down-btn {
+      background-color: $light-dark-color;
+    }
+    .arrow-down-icon-black {
+      display:none;
+    }
+    .banner-title {
+      color: $white-color;
+    }
+
+    .banner-description {
+      color: $white-color;
+    }
+
+    .banner-buttons {
+      .btn-resume {
+        background-color: $white-color;
+        color: $dark-color;
+        border: 2px solid transparent;
+
+        &:hover {
+          border-color: $white-color;
+          color: $white-color;
+          background-color: transparent;
+
+          .download-icon-black {
+            display: none;
+          }
+
+          .download-icon-white {
+            display: block;
+            height: 1rem;
+            width: 1rem;
+          }
+        }
+      }
+
+      .download-icon-white {
+        display: none;
+      }
+
+      .download-icon-black {
+        height: 1rem;
+        width: 1rem;
+      }
+
+      .btn-conect {
+        color: $white-color;
+      }
+    }
+  }
+}

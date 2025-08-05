@@ -1,0 +1,175 @@
+@use '../variables/variables' as *;
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    display: block;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white-color;
+      transition: opacity 0.3s ease;
+    }
+
+    .portfolio-subtitle {
+      font-size: $font-size-m;
+      font-weight: 400;
+      z-index: 2;
+      font-family: $font-poppins;
+      color: $white-color;
+    }
+
+    .portfolio-info {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1rem;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      opacity: 0;
+      transition: all 0.3s ease;
+
+      .portfolio-date {
+          padding-left: $padding-s;
+          font-size: $font-size-s;
+          color: $white-color;
+          font-family: $font-montserrat;
+      }
+
+      .view-more-btn {
+        background-color: transparent;
+        color: $white-color;
+        border: 1px solid $orange-color;
+        padding: 0.35rem 0.75rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        font-family: $font-poppins;
+        font-size: $font-size-s;
+        transition: background-color 2s ease, color 2s ease, border 2s ease;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      filter: none;
+
+      .portfolio-info {
+          bottom: 0;
+          opacity: 1;
+      
+      .view-more-btn {
+          background-color: $orange-color;
+          color: $white-color;
+          border: 1px solid $orange-color;
+      }
+    }
+
+    .overlay {
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+      max-width: 100%;
+      height: 200px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+      height: 250px;
+  }
+}
+
+[data-theme="light"] {
+  .portfolio-section {
+    .portfolio-info {
+      .view-more-btn {
+        &:hover {
+          background-color: transparent;
+          color: $white-color;
+          border: 1px solid $white-color;
+        }
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .portfolio-section {
+    .portfolio-title,
+    .portfolio-subtitle,
+    .portfolio-date,
+    .modal-title,
+    .modal-description {
+      color: $white-color;
+    }
+
+    .portfolio-info {
+      background-color: rgba(0, 0, 0, 0.95);
+
+      .portfolio-date {
+        color: $white-color;
+      }
+
+      .view-more-btn {
+        &:hover {
+          background-color: transparent;
+          color: $white-color;
+          border: 1px solid $white-color;
+        }
+      }
+    }
+
+    .modal {
+      .modal-content {
+        background-color: $dark-color;
+      }
+
+      .modal-close {
+        color: $white-color;
+      }
+
+      .modal-description,
+      .modal-title {
+        color: $white-color;
+      }
+
+      .modal-buttons .modal-btn {
+        background-color: $white-color;
+        color: $dark-color;
+
+        &:hover {
+          background-color: transparent;
+          color: $white-color;
+          border: 1px solid $white-color;
+        }
+      }
+    }
+  }
+}

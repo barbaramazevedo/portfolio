@@ -1,0 +1,206 @@
+@use 'sass:color';
+@use '../variables/variables' as *;
+
+.skills-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1192px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 767px) {
+            padding: 0 2rem;
+        }
+
+    .skills-title {
+        font-size: $font-size-xl;
+        font-family: $font-poppins;
+        color: $dark-color;
+        margin-bottom: $padding-4xl;
+    }
+
+    .skills-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        gap: 1.5rem;
+        justify-items: center;
+       
+        @media screen and (max-width: 480px) {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 0;
+            .skills-title {
+                font-size: $font-size-b;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+            .skills-title {
+                font-size: $font-size-b;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+         @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(4, minmax(8rem, 1fr));
+            padding: 4rem 12rem;
+        }
+    }
+
+    .card {
+        position: relative;
+        text-align: center;
+        background-color: $white-color;
+        width: 100%;
+        max-width: 8rem;
+        min-width: 6rem;
+        aspect-ratio: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 2.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+        p {
+            font-family: $font-montserrat;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: $orange-color;
+        }
+
+        img {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.3rem;
+            background-image: linear-gradient(90deg, $orange-color 0%, color.adjust($orange-color, $lightness: 10%) 92.32%);
+            bottom: -0.1rem;
+            left: 0;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+
+        &:hover {
+            transform: scale(1.15);
+        }
+
+        .html-icon-white,
+        .css-icon-white,
+        .javascript-icon-white,
+        .typescript-icon-white,
+        .react-icon-white,
+        .java-icon-white,
+        .jest-icon-white,
+        .git-icon-white,
+        .figma-icon-white,
+        .sass-icon-white,
+        .photoshop-icon-white,
+        .ui-icon-white {
+            display: none;
+        }
+    }
+}
+
+[data-theme="dark"] {
+    .skills-section {
+        .skills-title {
+            color: $white-color;
+        }
+
+        .card {
+            background-color: $light-dark-color;
+
+            p {
+                color: $white-color;
+            }
+
+            .html-icon-black,
+            .css-icon-black,
+            .javascript-icon-black,
+            .typescript-icon-black,
+            .react-icon-black,
+            .java-icon-black,
+            .jest-icon-black,
+            .git-icon-black,
+            .figma-icon-black,
+            .sass-icon-black,
+            .photoshop-icon-black,
+            .ui-icon-black {
+                display: none;
+            }
+
+            .html-icon-white,
+            .css-icon-white,
+            .javascript-icon-white,
+            .typescript-icon-white,
+            .react-icon-white,
+            .java-icon-white,
+            .jest-icon-white,
+            .git-icon-white,
+            .figma-icon-white,
+            .sass-icon-white,
+            .photoshop-icon-white,
+            .ui-icon-white {
+                display: block;
+            }
+        }
+    }
+}
+
+.soft-skills-title,
+.hard-skills-title {
+  font-size: $font-size-xm;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-family: $font-poppins;
+  color: $dark-color;
+
+  [data-theme="dark"] & {
+    color: $white-color;
+  }
+}
+
+.soft-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0 2rem;
+
+  .soft-card {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid $orange-color;
+    border-radius: 2rem;
+    font-family: $font-montserrat;
+    font-weight: 500;
+    color: $orange-color;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: $orange-color;
+      color: $white-color;
+    }
+
+    [data-theme="dark"] & {
+      border-color: $white-color;
+      color: $white-color;
+
+      &:hover {
+        background-color: $white-color;
+        color: $dark-color;
+      }
+    }
+  }
+}

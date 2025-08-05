@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+	<title>email2-black</title>
+	<defs>
+		<image  width="128" height="88" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABYAQMAAAAHnW3KAAAAAXNSR0IB2cksfwAAAAZQTFRF////////VXz1bAAAAAJ0Uk5TAP9bkSK1AAABzElEQVR4nK2UQW6DMBBFZwgSrJrcALLKMdKIC/UGCeoi214oUjhGdnCD0BVWA+7M2GC7jlSpKpuQz/h5/MczuL6D//S4vwbCGAvHUyBo1BA+fxGiXYo2EBRmQyB0uHoEQoMQUhEhSFUnCAFV5QjB+fsNXiuf2lTYbidPqM845B5VJwU+Ui/5Md2jRo/ab8ig+uyS77YT6s6j0kfUFOYSX99Rj47Kr6hpqzl5RSmQhY7KOBKaw0yt3x8sOCqnRILKLXVMiUbCQmWm1GU2uiu1KVRjLZFfFuQL2EgWlLHEsFgQOtjdpNjGEpOPCJwh2IxFMJaYM4nQb4iqE1koglhifTE3iKn2jEbg5dZbI/Af65MRONzWx0aU+0uaeRH1qbjl6DEQslsJbpcxhdXlFVweKn/7gJdPObM5SznkUHTZcpam+krgeBAnZz/ovhonZ8fIYOcYe9rtBucpx6pd61zneozV1dXlZ+VsFWwdpPr26gqVhLmSZi3foOX68xsJru049sktXG6UOQNqxxQq6sZrKXqn9vBamaJxSry2JCq1WNBRBbYek6lxm0IwHrrySasHI2ZM43GBUyDU8ciJhlI0tv5jFkYD9veZ/HOMfwNbjjH0Y0rljQAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="20"/>
+</svg>

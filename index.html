@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAZ • Bárbara Azevedo</title>
+    <link rel="icon" type="svg" href="./assets/icons/icon-baz.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/base/reset.css" />
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+    <script type="module" src="src/controller/main.js" defer></script>
+</head>
+<body>
+    <div id="all-content">
+        <header>
+            <nav class="nav container">
+                <button class="menu-toggle" aria-label="open menu">
+                    <img src="./assets/icons/menu-white.svg" alt="Menu" class="menu-hamb-white" />
+                    <img src="./assets/icons/menu-black.svg" alt="Menu" class="menu-hamb-black"/>
+                </button>
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="#home" data-i18n="home" data-page="home">Home</a></li>
+                    <li class="menu-item"><a href="#skills" data-i18n="skills" data-page="skills">Skills</a></li>
+                    <li class="menu-item"><a href="#portfolio" data-i18n="portfolio" data-page="portfolio">Portfolio</a></li>
+                    <li class="menu-item"><a href="#contact" data-i18n="contact" data-page="contact">Contact</a></li>
+
+                    <li class="menu-actions-mobile">
+                        <select id="language-select">
+                            <option value="pt">PT</option>
+                            <option value="en">EN</option>
+                        </select>
+
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar Tema">
+                            <div class="icon-wrapper">
+                                <img src="./assets/icons/sun.svg" alt="Sun" class="icon icon-sun" />
+                                <img src="./assets/icons/moon.svg" alt="Moon" class="icon icon-moon" />
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+
+                <h1 class="nav-title">BAZ</h1>
+
+                <div class="actions-content">
+                    <select id="language-select-desktop">
+                        <option value="pt">PT</option>
+                        <option value="en">EN</option>
+                    </select>
+                    
+                    <button id="theme-toggle-desktop" class="theme-toggle" aria-label="Alternar Tema">
+                        <div class="icon-wrapper">
+                            <img src="./assets/icons/sun.svg" alt="Sun" class="icon icon-sun" />
+                            <img src="./assets/icons/moon.svg" alt="Moon" class="icon icon-moon" />
+                        </div>
+                    </button>
+                    
+                </div>
+            </nav>
+        </header>
+        <main id="main-content" class="main-content">
+            <section id="home" class="banner container">
+                <div class="banner-content">
+                    <img
+                        src="./assets/images/photo-barbara.jpg"
+                        alt="Imagem Bárbara Azevedo"
+                        class="profile-image"
+                    />
+                    <h2 class="banner-title" data-i18n="bannerTitle">
+                        I'm <span class="highlight">Bárbara Azevedo</span>,<br />
+                        a Intern <span class="highlight">Software developer</span>
+                    </h2>
+                    <p class="banner-description" data-i18n="bannerDescription">
+                        Learning and growing in software development with a current focus on front-end, while exploring back-end technologies and aiming to become a full-stack developer.
+                    </p>
+                    <div class="banner-buttons">
+                        <a id="resume-link" href="./assets/pdfs/Resume-Barbara_Azevedo.pdf" class="btn btn-resume" data-i18n="resume-download" download>
+                            <span data-i18n="resume">Resume</span>
+                            <img src="./assets/icons/download-black.svg" alt="Download Icon" class="download-icon-black"/>
+                            <img src="./assets/icons/download-white.svg" alt="Download Icon" class="download-icon-white"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/barbara-moreira-azevedo/" target="_blank" class="btn btn-conect" data-i18n="connect">
+                            Connect with me
+                        </a>
+                    </div>
+                    <div class="scroll-icon-box">
+                        <a class="scroll-btn">
+                            <img src="./assets/icons/mouse-black.svg" alt="Mouse Icon" class="mouse-icon-black"/>
+                            <img src="./assets/icons/mouse-white.svg" alt="Mouse Icon" class="mouse-icon-white"/>
+                            <p data-i18n="scroll-button">Scroll Down</p>
+                        </a>
+                        <a class="arrow-down-btn">
+                            <img src="./assets/icons/arrow-black-down.svg" alt="arrow Icon" class="arrow-down-icon-black"/>
+                            <img src="./assets/icons/arrow-white-down.svg" alt="arrow Icon" class="arrow-down-icon-white"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" class="skills-section container">
+                <h2 class="skills-title" data-i18n="skills-title"></h2>
+                <h3 class="hard-skills-title" data-i18n="hard-skills-title"></h3>
+                <div class="skills-cards-container">
+                    <div class="card" key="1">
+                        <p>HTML 5</p>
+                        <img src="./assets/icons/html-black.svg" alt="Html icon" class="html-icon-black" />
+                        <img src="./assets/icons/html-white.svg" alt="Html icon" class="html-icon-white"/>
+                    </div>
+                    <div class="card" key="2">
+                        <p>CSS 3</p>
+                        <img src="./assets/icons/css-black.svg" alt="Css icon" class="html-icon-black" />
+                        <img src="./assets/icons/css-white.svg" alt="Css icon" class="html-icon-white"/>
+                    </div>
+                    <div class="card" key="3">
+                        <p>React.js</p>
+                        <img src="./assets/icons/react-black.svg" alt="React icon" class="react-icon-black" />
+                        <img src="./assets/icons/react-white.svg" alt="React icon" class="react-icon-white"/>
+                    </div>
+                    <div class="card" key="4">
+                        <p>Jest</p>
+                        <img src="./assets/icons/jest-black.svg" alt="Jest icon" class="jest-icon-black" />
+                        <img src="./assets/icons/jest-white.svg" alt="Jest icon" class="jest-icon-white"/>
+                    </div>
+                    <div class="card" key="5">
+                        <p>JavaScript</p>
+                        <img src="./assets/icons/javascript-black.svg" alt="Javascript icon" class="javascript-icon-black" />
+                        <img src="./assets/icons/javascript-white.svg" alt="Javascript icon" class="javascript-icon-white"/>
+                    </div>
+                    <div class="card" key="6">
+                        <p>Typescript</p>
+                        <img src="./assets/icons/typescript-black.svg" alt="Typescript icon" class="typescript-icon-black" />
+                        <img src="./assets/icons/typescript-white.svg" alt="Typescript icon" class="typescript-icon-white"/>
+                    </div>
+                    <div class="card" key="7">
+                        <p>Java</p>
+                        <img src="./assets/icons/java-black.svg" alt="Java icon" class="java-icon-black" />
+                        <img src="./assets/icons/java-white.svg" alt="Java icon" class="java-icon-white"/>
+                    </div>
+                    <div class="card" key="8">
+                        <p>Git</p>
+                        <img src="./assets/icons/git-black.svg" alt="Git icon" class="git-icon-black" />
+                        <img src="./assets/icons/git-white.svg" alt="Git icon" class="git-icon-white"/>
+                    </div>
+                    <div class="card" key="9">
+                        <p>UX / UI</p>
+                        <img src="./assets/icons/UI-black.svg" alt="UI icon" class="ui-icon-black" />
+                        <img src="./assets/icons/UI-white.svg" alt="UI icon" class="ui-icon-white"/>
+                    </div>
+                    <div class="card" key="10">
+                        <p>Figma</p>
+                        <img src="./assets/icons/figma-black.svg" alt="Figma icon" class="figma-icon-black" />
+                        <img src="./assets/icons/figma-white.svg" alt="Figma icon" class="figma-icon-white"/>
+                    </div>
+                    <div class="card" key="11">
+                        <p>Sass</p>
+                        <img src="./assets/icons/sass-black.svg" alt="Sass icon" class="sass-icon-black" />
+                        <img src="./assets/icons/sass-white.svg" alt="Sass icon" class="sass-icon-white"/>
+                    </div>
+                    <div class="card" key="12">
+                        <p>PhotoShop</p>
+                        <img src="./assets/icons/photoshop-black.svg" alt="Photoshop icon" class="photoshop-icon-black" />
+                        <img src="./assets/icons/photoshop-white.svg" alt="Photoshop icon" class="photoshop-icon-white"/>
+                    </div>
+                </div>
+
+                <h3 class="soft-skills-title" data-i18n="soft-skills-title"></h3>
+                <div class="soft-skills-container">
+                    <div class="soft-card" data-i18n="soft-card-communication"></div>
+                    <div class="soft-card" data-i18n="soft-card-detail"></div>
+                    <div class="soft-card" data-i18n="soft-card-teamwork"></div>
+                    <div class="soft-card" data-i18n="soft-card-proactivity"></div>
+                    <div class="soft-card" data-i18n="soft-card-adaptability"></div>
+                    <div class="soft-card" data-i18n="soft-card-user"></div>
+                </div>
+            </section>
+            
+            <section class="portfolio-section container" id="portfolio" >
+                <h2 class="portfolio-title" data-i18n="portfolio-title">Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div 
+                        class="portfolio-card"
+                        data-title="Guess my Number"
+                        data-img="./assets/images/guess-my-number.png"
+                        data-date="August 1st, 2024"
+                        data-date-i18n="guess-date"
+                        data-description=""
+                        data-description-i18n="guess-description"
+                        data-site="https://guessmynumber-simplegame.netlify.app/"
+                        data-repo="https://github.com/barbaramazevedo/GuessMyNumber-Game"
+                    >
+                        <img src="./assets/images/guess-my-number.png" alt="Cover of the Guess the Number project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Guess my Number</h3>
+                        </div>
+                        <div class="portfolio-info">
+                        <span class="portfolio-date" data-i18n="guess-date">August 1st, 2024</span>
+                        <button class="view-more-btn">
+                        <span data-i18n="view-more">View more</span>
+                        </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="Lumina Website"
+                        data-img="./assets/images/lumina.png"
+                        data-date=""
+                        data-date-i18n="lumina-date"
+                        data-description=""
+                        data-description-i18n="lumina-description"
+                        data-site="https://luminacreativedesign.netlify.app/"
+                        data-repo="https://github.com/barbaramazevedo/Lumina-Creative-Website"
+                    >
+                        <img src="./assets/images/lumina.png" alt="Cover of Lumina project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Lumina website</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="lumina-date"></span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="Mold Ceramic Website"
+                        data-img="./assets/images/mold.png"
+                        data-date="July 22, 2024"
+                        data-date-i18n="mold-date"
+                        data-description=""
+                        data-description-i18n="mold-description"
+                        data-site="https://mold-ceramic.netlify.app/"
+                        data-repo="https://github.com/barbaramazevedo/Mold-Ceramic-Website"
+                    >
+                        <img src="./assets/images/mold.png" alt="Cover of Mold Ceramic project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Mold Ceramic</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="mold-date">July 22, 2024</span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="CineTag Website"
+                        data-img="./assets/images/cinetag.png"
+                        data-date=""
+                        data-date-i18n="cinetag-date"
+                        data-description=""
+                        data-description-i18n="cinetag-description"
+                        data-site="https://cinetag-react-brown.vercel.app/"
+                        data-repo="https://github.com/barbaramazevedo/cinetag-react"
+                    >
+                        <img src="./assets/images/cinetag.png" alt="Cover of CineTag project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">CineTag Website</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="cinetag-date">May 31, 2025</span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="Leno Website"
+                        data-img="./assets/images/leno.png"
+                        data-date=""
+                        data-date-i18n="leno-date"
+                        data-description=""
+                        data-description-i18n="leno-description"
+                        data-site="https://leno-website-lac.vercel.app/"
+                        data-repo="https://github.com/barbaramazevedo/Leno-Website"
+                    >
+                        <img src="./assets/images/leno.png" alt="Cover of Leno project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Leno website</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="leno-date">July 05, 2024</span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="Library Components"
+                        data-img="./assets/images/react-library-components.png"
+                        data-date=""
+                        data-date-i18n="library-components-date"
+                        data-description=""
+                        data-description-i18n="library-components-description"
+                        data-repo="https://github.com/barbaramazevedo/react-library-components"
+                    >
+                        <img src="./assets/images/react-library-components.png" alt="Cover of React Library components project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Library Components</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="leno-date">July 16, 2025</span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="Pig Game Dice"
+                        data-img="./assets/images/pig-game-dice.png"
+                        data-date="August 15, 2024"
+                        data-date-i18n="pig-game-date"
+                        data-description=""
+                        data-description-i18n="pig-game-description"
+                        data-site="https://pig-game-dice-game.netlify.app/"
+                        data-repo="https://github.com/barbaramazevedo/PigGameDice-Game"
+                    >
+                        <img src="./assets/images/pig-game-dice.png" alt="Cover of Pig Game Dice project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Pig Game Dice</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="pig-game-date">August 15, 2024</span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="Organo Website"
+                        data-img="./assets/images/organo.png"
+                        data-date=""
+                        data-date-i18n="organo-date"
+                        data-description=""
+                        data-description-i18n="organo-description"
+                        data-site="https://organo-react-barbara.netlify.app/"
+                        data-repo="https://github.com/barbaramazevedo/organo-react"
+                    >
+                        <img src="./assets/images/organo.png" alt="Cover of Organo project" class="portfolio-img"/>
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Organo</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="organo-date">May 16, 2025</span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div 
+                        class="portfolio-card"
+                        data-title="Be The Friend"
+                        data-img="./assets/images/BeTheFriend.png"
+                        data-date=""
+                        data-date-i18n="bethefriend-date"
+                        data-description=""
+                        data-description-i18n="bethefriend-description"
+                        data-site=""
+                        data-repo="https://github.com/Glauber-Developer/BeTheFriend"
+                    >
+                        <img src="./assets/images/BeTheFriend.png" alt="Cover of Be The Friend project" class="portfolio-img" />
+                        <div class="overlay">
+                            <h3 class="portfolio-subtitle">Be The Friend</h3>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-date" data-i18n="bethefriend-date">December 16, 2024</span>
+                            <button class="view-more-btn">
+                                <span data-i18n="view-more">View more</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </section>
+
+            <section id="contact" class="contact-section container">
+                <h2 class="contact-title" data-i18n="get-in-touch">Get in Touch</h2>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="email-icon">
+                            <img src="./assets/icons/email-black.svg" alt="Email icon" class="email-icon-white" />
+                            <img src="./assets/icons/email-white.svg" alt="Email icon" class="email-icon-black"/>
+                        </div>
+                        <h3 class="email-label">E-mail</h3>
+                        <p class="email-address">barbara.azevedo22@gmail.com</p>
+                    </div>
+
+                    <form class="contact-form" action="mailto:barbara.azevedo22@gmail.com" method="POST" enctype="text/plain">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your name" data-i18n="placeholder-name" required />
+                            <input type="email" name="email" placeholder="Your Email" data-i18n="placeholder-email" required />
+                        </div>
+                        <input type="text" name="subject" placeholder="Subject" data-i18n="placeholder-subject" required />
+                        <textarea name="message" rows="6" placeholder="Your message" data-i18n="placeholder-message" required></textarea>
+                        <button type="submit" class="btn btn-submit" data-i18n="send-message">Send</button>
+                    </form>
+                </div>
+            </section>
+
+            <div class="floating-hire-btn">
+            <div class="circle-text">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path id="circlePath" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0" />
+                <text>
+                <textPath href="#circlePath" startOffset="0%" data-i18n="circule-text">
+                    • Software • Developer • Intern  
+                </textPath>
+                </text>
+            </svg>
+            </div>
+            <a href="https://www.linkedin.com/in/barbara-moreira-azevedo/" target="_blank" class="hire-center" data-i18n="circule-text-center">Hire Me</a>
+        </div>
+
+        <div class="scroll-icon-box">
+            <a href="#home" class="scroll-btn-arrow">
+                <img src="./assets/icons/arrow-black.svg" alt="Arrow Icon" class="arrow-icon-black"/>
+                <img src="./assets/icons/arrow-white.svg" alt="Arrow Icon" class="arrow-icon-white"/>
+            </a>
+        </div>
+
+        </main>
+        <footer>
+        <section class="footer">
+            <hr class="footer-divider" />
+            <div class="footer-content">
+                <h2 class="footer-title" data-i18n="footer-title">Bárbara Azevedo Portfólio .</h3>
+                <h3 class="footer-subtitle" data-i18n="footer-subtitle">Living, learning and leveling up everyday.</h3>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/barbara-moreira-azevedo/" target="_blank" rel="noopener" class="footer-linkedin">
+                        <img src="./assets/icons/linkedin-black.svg" alt="Linkedin Icon" class="linkedin-icon-black"/>
+                        <img src="./assets/icons/linkedin-white.svg" alt="Linkedin Icon" class="linkedin-icon-white"/>
+                    </a>
+                    <a href="https://github.com/barbaramazevedo" target="_blank" rel="noopener" class="footer-github">
+                        <img src="./assets/icons/github-white.svg" alt="GitHub" class="github-icon-white" />
+                        <img src="./assets/icons/github-black.svg" alt="GitHub" class="github-icon-black"/>
+                    </a>
+                    <a href="mailto:barbara.azevedo22@gmail.com" class="footer-email" >
+                        <img src="./assets/icons/email2-white.svg" alt="Email icon link" class="email-icon-white"/>
+                        <img src="./assets/icons/email2-black.svg" alt="Email icon link" class="email-icon-black"/>
+                    </a>
+                </div>
+                <p class="footer-paragraph" data-i18n="footer-paragraph"></p>
+            </div>
+        </section>
+        </footer>
+    </div>    
+    <div id="portfolio-modal" class="modal hidden" >
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-left">
+                <img src="" alt="Imagem do projeto" />
+            </div>
+            <div class="modal-right">
+                <h3 class="modal-title">Project Title</h3>
+                <p class="modal-description">Project description</p>
+                <h6 class="modal-date">Project date</h6>
+                <div class="modal-buttons">
+                    <a href="#" target="_blank" class="modal-btn site-link" >
+                        <span data-i18n="btn-project">Project</span>
+                        <img src="./assets/icons/arrow-45-white.svg" alt="Arrow 45 icon" class="arrow45-icon-white" />
+                        <img src="./assets/icons/arrow-45-black.svg" alt="Arrow 45 icon" class="arrow45-icon-black" />
+                    </a>
+                    <a href="#" target="_blank" class="modal-btn repo-link" >
+                        <span data-i18n="btn-repository">Repository</span>
+                        <img src="./assets/icons/arrow-45-white.svg" alt="Arrow 45 icon" class="arrow45-icon-white" />
+                        <img src="./assets/icons/arrow-45-black.svg" alt="Arrow 45 icon" class="arrow45-icon-black" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

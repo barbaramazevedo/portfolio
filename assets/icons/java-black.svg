@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="150" height="150">
+	<title>icons8-logo-java-coffee-cup-150</title>
+	<defs>
+		<image  width="118" height="150" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHYAAACWAQMAAAAxLe7QAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAAAAAApWe5zwAAAAJ0Uk5TAP9bkSK1AAADSklEQVR4nJWVvW7UQBDHd2wLH1KEjdJGshEFJW+AHVHkMRCPQEekgH2ABF0eAeURUqaAO/MGKVNEOUs0KSJsBMIHPi8zs7v2biQS4eLufmd7Zv7ztSD0tfWDv+BffOf3zRyub+H98r84enELH+cOJ0cuZ/ObuQDXnpw7DIPLfu9y2LkcNeqX4WTlcrbwHC4Kh2HYBDb7vctht56Jg3cjR00bR5ezkbNlG8s2Hrko60ddlY8sRVUsKWId1SDmhfRG+34vAuURtHl5tyNzmpPV5uGqTkfOluu9JZnXXJTtYQlTvFLUCZtXjO6+PFGCDL87QEGG0f1MuVMcduie3Y18v2F3iqNms91Y+Y+a9SM738mqfXzh2VxnLlfPrnGxcHi+cBmy23hp+7/wHI6+eWiyvJktfWEHUXOdrXxgM77vXH7bW/mDoXpqs5DV7mDlWxS7uXT4eepwdpQW+xYnp3F2YnFUuxy2s+TMYv+ny/AncFgMnsuv36ALi5M6qVKLo9Ziv6/29hc4zzjDwN0D/qdit/T7OgU1C2K5mFNbzIB7vRT5Zw9vbAKgZsLSwS90L6UH/BQaOU+h+HiBnKyYN7gRDhsgZqdhJwDrwKyuTeD3Nq9nLrcxLhGyr7nKmdGQuuYlM8anzQlmDFNopTAAf07CgfOB4xaLicOzVJng+MZVOLJeddxnxJJbK11phqFOuWQiOQ/A7J7iVSCwxiq/65mkCLAnFGs9uHEsrh8MnH8jqN3Gncn+9PN7HbAMIzC6CphVhtqYWoD1SSWYVrbuf/KGTaP74d73HiOEi1Tz4AlzEWO3OedJ+MvjFh8ZdzctUMPK/7SfdMXGfaYrygMLwr9KGq2fWYrYPB9QJ/biw0ttD89AHFzxdUfpo5hwUYg20pbDkxxwU6fkgMLBQoKkG1JFE50iy0ncdcaZcBg1qvf1JWtitUgEz02OrISzLqxPURoDPCgcX6xvSy8Aio0toJBNsAWcHIxOsqQdMNVXGTkAU20lsbfmgQbkJ4jphSqPLqd+x9siO7b6h/JQq7bXiALM+cTFQAGTWNIrqN+T2qSroXmn5WRuc79SWpQ+Gkn+QX+QMBCTPxUR2zcRVvl4XgmVhfF8pM/pfOU/2MtfcuKiSuBxH6cAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="16" y="0"/>
+</svg>

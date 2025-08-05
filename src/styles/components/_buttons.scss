@@ -1,0 +1,17 @@
+@mixin linkedin-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

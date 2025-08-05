@@ -1,0 +1,6 @@
+@use '../variables/variables' as *;
+
+:root[data-theme="light"] {
+  background-color: $white-color;
+  color: $dark-color;
+}

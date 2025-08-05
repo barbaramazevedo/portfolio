@@ -1,0 +1,235 @@
+@use '../variables/variables' as *;
+@use '../mixins/mixins' as *;
+
+
+#all-content{
+  transition: filter 0.3s ease, background-color 0.3s ease;
+}
+
+body.modal-open #all-content {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 2rem;
+
+  &.hidden {
+    display: none;
+  }
+
+  .modal-content {
+    background: $white-color;
+    width: 90%;
+    max-width: 1100px;
+    min-height: 500px;
+    display: flex;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $orange-color;
+  }
+
+  .modal-left {
+    flex: 2;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .modal-right {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .modal-title {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+      font-family: $font-poppins;
+      text-align: left;
+      color: $orange-color;
+    }
+
+    .modal-date {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      font-family: $font-montserrat;
+      text-align: left;
+      color: $orange-color;
+    }
+
+    .modal-description {
+      flex-grow: 1;
+      font-size: 0.9rem;
+      color: $light-dark-color;
+      margin-bottom: 2rem;
+      font-family: $font-montserrat;
+      text-align: left;
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      &.align-right {
+        justify-content: flex-start;
+      }
+
+      .modal-btn {
+        @include button-primary;
+        font-family: $font-poppins;
+        font-size: $font-size-xs;
+        width: 175px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        .arrow45-icon-white,
+        .arrow45-icon-black {
+          height: 0.7rem;
+          width: 0.7rem;
+          object-fit: contain;
+        }
+
+        .arrow45-icon-black {
+          display: none;
+        }
+
+        &:hover {
+          .arrow45-icon-white {
+            display: none;
+          }
+
+          .arrow45-icon-black {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+[data-theme="light"] {
+  .modal-btn {
+    .arrow45-icon-white {
+      display: block;
+    }
+    .arrow45-icon-black {
+      display: none;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .modal-btn {
+    .arrow45-icon-white {
+      display: none;
+    }
+    .arrow45-icon-black {
+      display: block;
+    }
+
+    &:hover {
+      .arrow45-icon-white {
+        display: block;
+      }
+      .arrow45-icon-black {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 1rem;
+
+    .modal-content {
+      flex-direction: column;
+      width: 100%;
+      min-height: auto;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .modal-left {
+      flex: none;
+      height: 200px;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .modal-right {
+      flex: none;
+      padding: 1rem;
+
+      .modal-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .modal-date {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .modal-description {
+        font-size: 0.85rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+      }
+
+      .modal-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        justify-content: center;
+        align-items: stretch;
+
+        .modal-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+
+    .modal-close {
+      top: 0.5rem;
+      right: 0.5rem;
+      font-size: 1.5rem;
+    }
+  }
+}

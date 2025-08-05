@@ -1,0 +1,56 @@
+$dark-color: #3a3a3a;
+$light-dark-color: #606060;
+$gray-color: #3a3a3a;
+$white-color: #fbf9f9;
+$gray-color: #e3e3e3;
+$light-orange-color: #ea5454be;
+$purple-color: #9913ca;
+$yellow-color: #ead918;
+$orange-color: #ea5455;
+
+$font-poppins: "Poppins", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+
+$font-size-xxxl: 4.5rem;
+$font-size-xxl: 2.625rem;
+$font-size-xl: 2.438rem;
+$font-size-l: 1.938rem;
+$font-size-xm: 1.500rem;
+$font-size-m: 1.25rem;
+$font-size-xb: 1.1rem;
+$font-size-b: 1rem;
+$font-size-xs: 0.925rem;
+$font-size-s: 0.813rem;
+$font-size-ss: 0.7rem;
+
+$line-height: 120%;
+
+$padding-xs: 0.25rem;
+$padding-s: 0.5rem;
+$padding-m: 1rem;
+$padding-l: 1.5rem;
+$padding-xl: 2rem;
+$padding-xxl: 2.5rem;
+$padding-3xl: 3.75rem;
+$padding-4xl: 4rem;
+$padding-5xl: 4.75rem;
+$padding-6xl: 6.75rem;
+
+$gap-xs: 0.25rem;
+$gap-s: 0.5rem;
+$gap-b: 0.75rem;
+$gap-m: 1rem;
+$gap-l: 1.5rem;
+$gap-xl: 2rem;
+$gap-xxl: 2.5rem;
+$gap-xxxl: 5rem;
+  
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.3;
+  } to {
+    opacity: 1;
+    scale: 1;
+  }
+}

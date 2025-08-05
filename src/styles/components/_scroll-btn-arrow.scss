@@ -1,0 +1,46 @@
+@use '../variables/variables' as *;
+
+.scroll-btn-arrow {
+    position: fixed;
+    bottom: 50px;
+    left: 90%;
+    translate: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: $dark-color;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px 0px;
+    gap: 5px;
+    text-decoration: none;
+    background: $white-color;
+    border-radius: 30px;
+    z-index: 2;
+    display: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    img {
+        display: block;
+        height: 2rem;
+        width: 2rem;
+    }
+    &:hover {
+        transform: scale(1.10);
+    }
+}
+
+[data-theme="light"] {
+    .arrow-icon-white {
+        display: none;
+    }
+}
+
+[data-theme="dark"] {
+    .arrow-icon-black {
+        display: none;
+    }
+    .scroll-btn-arrow {
+        background-color: $light-dark-color;
+    }
+}

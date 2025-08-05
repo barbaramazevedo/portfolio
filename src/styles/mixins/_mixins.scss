@@ -1,0 +1,28 @@
+@use '../variables/variables' as *;
+
+@mixin button-primary {
+  background-color: $dark-color;
+  color: $white-color;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: $dark-color;
+    color: $dark-color;
+    background-color: transparent;
+
+    .download-icon-white {
+      display: none;
+    }
+
+    .download-icon-black {
+      display: block;
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+}
